@@ -71,7 +71,7 @@ while True:
     for name, host in hosts.items():
         new_host = socket.gethostbyname(name)
         if new_host != host:
-            print(str(datetime.datetime.now().strftime("%H:%M:%S %d-%m-%Y")) + f'[ERROR] {name} Выявленно несоответствие IP-адресов: Предыдущий адрес - {host}  Новый адрес - {new_host}')
+            print(str(datetime.datetime.now().strftime("%H:%M:%S %d-%m-%Y")) + f'[ERROR] {name} | Выявленно несоответствие IP-адресов: Предыдущий адрес - {host} Новый адрес - {new_host}')
             hosts[name] = new_host
             with open("hosts.json", "w") as hosts_json:
                 hosts_json.write(json.dumps(hosts, indent=2))
