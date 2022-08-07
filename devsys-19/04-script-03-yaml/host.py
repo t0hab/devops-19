@@ -5,7 +5,6 @@ import datetime
 import json
 import yaml
 
-N = 1
 timeout = 1
 hosts = {'drive.google.com': '', 'mail.google.com': '', 'google.com': ''}
 
