@@ -13,10 +13,32 @@
 Установить на личный компьютер:
 
 - VirtualBox
-- Vagrant
+- Vagrant 
 - Ansible
 
 *Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.*
+
+### Ответ
+```bash
+┌─(/etc/apt)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(20:33:17)──> VBoxHeadless  --version                                                                                                                    ──(Пт,сен09)─┘
+Oracle VM VirtualBox Headless Interface 6.1.38
+(C) 2008-2022 Oracle Corporation
+All rights reserved.
+
+6.1.38r153438
+┌─(/etc/apt)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(20:33:42)──> vagrant -v                                                                                                                                 ──(Пт,сен09)─┘
+Vagrant 2.2.6
+┌─(/etc/apt)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(20:33:51)──> ansible --version                                                                                                                          ──(Пт,сен09)─┘
+ansible 2.9.6
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/t0hab/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, Jun 22 2022, 20:18:18) [GCC 9.4.0]
+```
 
 ## Задача 4 (*)
 
@@ -26,4 +48,12 @@
 - Зайти внутрь ВМ, убедиться, что Docker установлен с помощью команды
 ```
 docker ps
+```
+
+### Ответ 
+```bash
+┌─(~)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(20:50:38)──> sudo docker ps                                                                                                                             ──(Пт,сен09)─┘
+CONTAINER ID   IMAGE     COMMAND   CREATED              STATUS              PORTS     NAMES
+68d70c8c37ec   ubuntu    "bash"    About a minute ago   Up About a minute             vigorous_lamarr
 ```
