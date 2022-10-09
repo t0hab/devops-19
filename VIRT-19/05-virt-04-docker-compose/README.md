@@ -9,16 +9,15 @@
 
 ## Ответ
 ```bash
-┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/05-virt-04-docker-compose)───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
-└─(17:06:39 on main ✹)──> yc compute image list                                                                                                                                                                               ──(Вс,окт09)─┘
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/05-virt-04-docker-compose/packer)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/4)─┐
+└─(20:23:51 on main ✖ ✹ ✚ ✭)──> yc compute image list                                                                                                                                                                         ──(Вс,окт09)─┘
 +----------------------+---------------+--------+----------------------+--------+
 |          ID          |     NAME      | FAMILY |     PRODUCT IDS      | STATUS |
 +----------------------+---------------+--------+----------------------+--------+
-| fd8a6vd567ij3ab38hne | centos-7-base | centos | f2euv1kekdgvc0jrpaet | READY  |
+| fd86elr2bh9itmn76tt4 | centos-7-base | centos | f2euv1kekdgvc0jrpaet | READY  |
 +----------------------+---------------+--------+----------------------+--------+
-
 ```
-![image alt](https://github.com/t0hab/devops-19/blob/main/VIRT-19/05-virt-04-docker-compose/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202022-10-09%2017-10-14.png?raw=true)
+![image alt](https://github.com/t0hab/devops-19/blob/main/VIRT-19/05-virt-04-docker-compose/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202022-10-09%2021-04-40.png?raw=true)
 ---
 
 ## Задача 2
