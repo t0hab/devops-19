@@ -7,7 +7,7 @@
 
 Приведите получившуюся команду или docker-compose манифест.
 
-##Ответ
+## Ответ
 ```bash 
                                  List of databases
    Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
