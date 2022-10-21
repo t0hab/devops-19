@@ -64,7 +64,7 @@ postgres=#
 - список пользователей с правами над таблицами test_db
 
 ### Ответ
-```postgresql
+```sql
 ---создайте пользователя test-admin-user и БД test_db
 CREATE DATABASE test_db
 ---
