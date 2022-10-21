@@ -218,7 +218,7 @@ update  clients set заказ = 5 where id = 3;
 ---Приведите SQL-запрос для выдачи всех пользователей, которые совершили заказ, а также вывод данного запроса.
 select * from clients where заказ is not null
 ```
-![alt](https://github.com/t0hab/devops-19/blob/main/VIRT-19/06-db-02-sql/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-21%20%D0%B2%2015.07.05.png?raw=true)
+![image4](https://github.com/t0hab/devops-19/blob/main/VIRT-19/06-db-02-sql/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-21%20%D0%B2%2015.07.05.png?raw=true)
 
 ## Задача 5
 
@@ -226,6 +226,12 @@ select * from clients where заказ is not null
 (используя директиву EXPLAIN).
 
 Приведите получившийся результат и объясните что значат полученные значения.
+
+## Ответ
+
+![image5](https://github.com/t0hab/devops-19/blob/main/VIRT-19/06-db-02-sql/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-21%20%D0%B2%2015.25.43.png?raw=true)
+
+Показывает стоимость (нагрузку на исполнение) запроса и фильтрацию по полю 'заказ' для выборки.
 
 ## Задача 6
 
