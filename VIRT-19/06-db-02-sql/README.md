@@ -64,13 +64,44 @@ postgres=#
 - список пользователей с правами над таблицами test_db
 
 ### Ответ
-БД:
-```bash 
+```sql
+---создайте пользователя test-admin-user и БД test_db
+CREATE DATABASE test_db
+---
+CREATE ROLE "test-admin-user" SUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT LOGIN;
 
-```
 
-```bash 
+---в БД test_db создайте таблицу orders и clients (спeцификация таблиц ниже)
+CREATE TABLE orders
+(
+    id serial PRIMARY KEY ,
+    "наименование" text,
+    "цена" integer
+);
+----
+CREATE TABLE clients
+(
+	id serial PRIMARY KEY,
+	"фамилия" text,
+	"страна_проживания" text,
+	"заказ" integer
+);
 
+---предоставьте привилегии на все операции пользователю test-admin-user на таблицы БД test_db
+SUPERUSER уже предоставлен при его создании
+
+---создайте пользователя test-simple-user
+CREATE ROLE "test-simple-user" NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT LOGIN;
+
+---предоставьте пользователю test-simple-user права на SELECT/INSERT/UPDATE/DELETE данных таблиц БД test_db
+GRANT SELECT ON TABLE public.clients TO "test-simple-user";
+GRANT INSERT ON TABLE public.clients TO "test-simple-user";
+GRANT UPDATE ON TABLE public.clients TO "test-simple-user";
+GRANT DELETE ON TABLE public.clients TO "test-simple-user";
+GRANT SELECT ON TABLE public.orders TO "test-simple-user";
+GRANT INSERT ON TABLE public.orders TO "test-simple-user";
+GRANT UPDATE ON TABLE public.orders TO "test-simple-user";
+GRANT DELETE ON TABLE public.orders TO "test-simple-user";
 ```
 
 ## Задача 3
