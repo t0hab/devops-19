@@ -244,3 +244,12 @@ select * from clients where заказ is not null
 Восстановите БД test_db в новом контейнере.
 
 Приведите список операций, который вы применяли для бэкапа данных и восстановления. 
+
+
+## Ответ
+
+```bash
+docker exec -t postgres_docker pg_dump -U postgres test_db -f /var/lib/postgresql/data/dump_test.sql 
+docker run --name postgres_docker2 -e POSTGRES_PASSWORD=t0hab -d postgres:12
+docker exec -i postgres_docker2 psql -U postgres -d test_db -f /var/lib/postgresql/data/dump_test.sql 
+```
