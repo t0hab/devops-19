@@ -140,6 +140,7 @@ Indexes:
     "orders_pkey" PRIMARY KEY, btree (id)
 ```
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
+
 `select * from information_schema.table_privileges tp where grantee like 'test%'`
 
 
