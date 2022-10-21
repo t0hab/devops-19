@@ -210,9 +210,9 @@ select count (*) from clients;
 
 ```sql
 ---Приведите SQL-запросы для выполнения данных операций.
-UPDATE  clients SET заказ = 3 WHERE id = 1;
-UPDATE  clients SET заказ = 4 WHERE id = 2;
-UPDATE  clients SET заказ = 5 WHERE id = 3;
+UPDATE clients SET заказ = 3 WHERE id = 1;
+UPDATE clients SET заказ = 4 WHERE id = 2;
+UPDATE clients SET заказ = 5 WHERE id = 3;
 ```
 ```sql
 ---Приведите SQL-запрос для выдачи всех пользователей, которые совершили заказ, а также вывод данного запроса.
