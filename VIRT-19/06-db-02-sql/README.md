@@ -184,8 +184,8 @@ insert into clients VALUES (1, 'Иванов Иван Иванович', 'USA'),
 select count (*) from orders;
 select count (*) from clients;
 ```
-![image2]()
-![image3]()
+![image2](https://github.com/t0hab/devops-19/blob/main/VIRT-19/06-db-02-sql/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-21%20%D0%B2%2014.16.26.png?raw=true)
+![image3](https://github.com/t0hab/devops-19/blob/main/VIRT-19/06-db-02-sql/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-21%20%D0%B2%2014.16.35.png?raw=true)
 
 ## Задача 4
 
