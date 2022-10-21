@@ -103,6 +103,48 @@ GRANT INSERT ON TABLE public.orders TO "test-simple-user";
 GRANT UPDATE ON TABLE public.orders TO "test-simple-user";
 GRANT DELETE ON TABLE public.orders TO "test-simple-user";
 ```
+```bash
+- итоговый список БД после выполнения пунктов выше,
+
+                                 List of databases
+   Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
+-----------+----------+----------+------------+------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
+ template0 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+ test_db   | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
+(4 rows)
+
+- описание таблиц (describe)
+
+                                  Table "public.clients"
+      Column       |  Type   | Collation | Nullable |               Default               
+-------------------+---------+-----------+----------+-------------------------------------
+ id                | integer |           | not null | nextval('clients_id_seq'::regclass)
+ фамилия           | text    |           |          | 
+ страна_проживания | text    |           |          | 
+ заказ             | integer |           |          | 
+Indexes:
+    "clients_pkey" PRIMARY KEY, btree (id)
+
+
+                               Table "public.orders"
+    Column    |  Type   | Collation | Nullable |              Default               
+--------------+---------+-----------+----------+------------------------------------
+ id           | integer |           | not null | nextval('orders_id_seq'::regclass)
+ наименование | text    |           |          | 
+ цена         | integer |           |          | 
+Indexes:
+    "orders_pkey" PRIMARY KEY, btree (id)
+
+- SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
+select * from information_schema.table_privileges tp where grantee like 'test%'
+
+
+- список пользователей с правами над таблицами test_db```
+
 
 ## Задача 3
 
