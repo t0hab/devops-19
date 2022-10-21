@@ -144,7 +144,7 @@ select * from information_schema.table_privileges tp where grantee like 'test%'
 
 
 - список пользователей с правами над таблицами test_db```
-
+![image1](https://github.com/t0hab/devops-19/blob/main/VIRT-19/06-db-02-sql/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-21%20%D0%B2%2013.38.03.png?raw=true)
 
 ## Задача 3
 
