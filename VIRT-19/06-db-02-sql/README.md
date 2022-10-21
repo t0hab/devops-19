@@ -10,6 +10,14 @@
 ## Ответ
 ```bash 
 ┌─(~/Documents/Нетология/devops-19/VIRT-19/06-db-02-sql)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@CND1113DZJ:s001)─┐
+└─(09:27:52 on main ✹ ✚ ✭)──> docker run --name postgres_docker -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v vol1:/var/lib/postgresql/data -v vol2:/var/lib/postgresql postgres:12         ──(Fri,Oct21)─┘
+ 
+c46ce96fa36c425607d941f21ddd1a4da2d7143b24cbbb6555b7a12ea4e61032
+┌─(~/Documents/Нетология/devops-19/VIRT-19/06-db-02-sql)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@CND1113DZJ:s001)─┐
+└─(09:29:18 on main ✹ ✚ ✭)──> docker ps                                                                                                                                                        ──(Fri,Oct21)─┘
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS                    NAMES
+c46ce96fa36c   postgres:12   "docker-entrypoint.s…"   3 seconds ago   Up 2 seconds   0.0.0.0:5432->5432/tcp   postgres_docker
+┌─(~/Documents/Нетология/devops-19/VIRT-19/06-db-02-sql)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@CND1113DZJ:s001)─┐
 └─(09:32:25 on main ✹ ✚ ✭)──> docker exec -ti postgres_docker psql -U postgres                                                                                                                 ──(Fri,Oct21)─┘
 psql (12.12 (Debian 12.12-1.pgdg110+1))
 Type "help" for help.
@@ -24,6 +32,9 @@ postgres=# \l
  template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
            |          |          |            |            | postgres=CTc/postgres
 (3 rows)
+
+postgres=# 
+
 ```
 
 
