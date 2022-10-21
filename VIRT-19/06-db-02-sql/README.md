@@ -206,6 +206,20 @@ select count (*) from clients;
  
 Подсказк - используйте директиву `UPDATE`.
 
+## Ответ
+
+```sql
+---Приведите SQL-запросы для выполнения данных операций.
+update  clients set заказ = 3 where id = 1;
+update  clients set заказ = 4 where id = 2;
+update  clients set заказ = 5 where id = 3;
+```
+```sql
+---Приведите SQL-запрос для выдачи всех пользователей, которые совершили заказ, а также вывод данного запроса.
+select * from clients where заказ is not null
+```
+![alt](https://github.com/t0hab/devops-19/blob/main/VIRT-19/06-db-02-sql/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-21%20%D0%B2%2015.07.05.png?raw=true)
+
 ## Задача 5
 
 Получите полную информацию по выполнению запроса выдачи всех пользователей из задачи 4 
