@@ -9,6 +9,12 @@
 
 ## Ответ
 ```bash 
+┌─(~/Documents/Нетология/devops-19/VIRT-19/06-db-02-sql)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@CND1113DZJ:s001)─┐
+└─(09:32:25 on main ✹ ✚ ✭)──> docker exec -ti postgres_docker psql -U postgres                                                                                                                 ──(Fri,Oct21)─┘
+psql (12.12 (Debian 12.12-1.pgdg110+1))
+Type "help" for help.
+
+postgres=# \l
                                  List of databases
    Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
 -----------+----------+----------+------------+------------+-----------------------
@@ -18,7 +24,6 @@
  template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
            |          |          |            |            | postgres=CTc/postgres
 (3 rows)
-
 ```
 
 
@@ -48,6 +53,16 @@
 - описание таблиц (describe)
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
 - список пользователей с правами над таблицами test_db
+
+### Ответ
+БД:
+```bash 
+
+```
+
+```bash 
+
+```
 
 ## Задача 3
 
