@@ -162,8 +162,51 @@ ANALYZE
 
 Можно ли было изначально исключить "ручное" разбиение при проектировании таблицы orders?
 
+### Ответ
+
+```sql
+test_database=# alter table orders rename to orders_simple;
+ALTER TABLE
+test_database=# create table orders (id integer, title varchar(80), price integer) partition by range(price);
+CREATE TABLE
+test_database=# create table orders_less499 partition of orders for values from (0) to (499);
+CREATE TABLE
+test_database=# create table orders_more499 partition of orders for values from (499) to (999999999);
+CREATE TABLE
+```
+```sql
+test_database=# insert into orders (id, title, price) select * from orders_simple;
+INSERT 0 8
+```
+Можно ли было изначально исключить "ручное разбиение" - да. Нужно было в начале проектирования таблиц сделать ее секционированной.
+Тогда бы не пришлось выполнять действия в ручную.
+
 ## Задача 4
 
 Используя утилиту `pg_dump` создайте бекап БД `test_database`.
 
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
+
+### Ответ
+```bash
+root@a97bc4846222:/# cd /var/lib/postgresql/
+root@a97bc4846222:/var/lib/postgresql# pg_dump -U postgres -d test_database > psql_dump.sql
+root@a97bc4846222:/var/lib/postgresql# ls -lh
+total 8.0K
+drwx------ 19 postgres postgres 4.0K Oct 29 07:55 data
+-rw-r--r--  1 root     root     3.5K Oct 29 08:02 psql_dump.sql
+root@a97bc4846222:/var/lib/postgresql# 
+```
+```sql
+--Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
+--Добавил бы UNIQUE
+create table public.orders (
+    id integer not null,
+    title character varying(80) not null,
+    price integer default 0 unique
+) partition by range(price);
+```
+```sql
+--можно так же через index
+create index on orders ((lower(title)));
+```
