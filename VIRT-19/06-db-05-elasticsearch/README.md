@@ -43,6 +43,7 @@ Successfully tagged netology_elastic:v1
 └─(17:53:00 on main ✹ ✚ ✭)──> sudo docker run --name elastic -p 9200:9200 -p 9300:9300 -d netology_elastic:v1                                                                         ──(Вс,окт30)─┘
 be0a9c6db8a82542c8322c339ec7e5305df313c62fb5b0ac99115999516c10b1
 ```
+![Снимок экрана от 2022-10-30 17-59-51](https://user-images.githubusercontent.com/103331839/198886307-a8af93e7-3d46-4c12-8847-6d85666baa75.png)
 
 
 ## Задача 2
