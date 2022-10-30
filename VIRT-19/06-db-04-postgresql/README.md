@@ -206,7 +206,4 @@ create table public.orders (
     price integer default 0 unique
 ) partition by range(price);
 ```
-```sql
---можно так же через index
-create index on orders ((lower(title)));
-```
+
