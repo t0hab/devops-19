@@ -45,16 +45,7 @@ be0a9c6db8a82542c8322c339ec7e5305df313c62fb5b0ac99115999516c10b1
 ```
 ![Снимок экрана от 2022-10-30 17-59-51](https://user-images.githubusercontent.com/103331839/198886307-a8af93e7-3d46-4c12-8847-6d85666baa75.png)
 
-```bash
-┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)──────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
-└─(18:23:48 on main ✚ ✭)──> sudo docker push netology_elastic:v1                                                                                                                  1 ↵ ──(Вс,окт30)─┘
-The push refers to repository [docker.io/library/netology_elastic]
-d7000fe19fc8: Preparing 
-8bd1bd5093f3: Preparing 
-a5bda59a0fc7: Preparing 
-174f56854903: Preparing 
-denied: requested access to the resource is denied
-```
+
 ```bash
 ┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)──────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
 └─(18:32:42 on main ✹ ✚ ✭)──> sudo docker push t0hab/netology_elastic:v1                                                                                                          1 ↵ ──(Вс,окт30)─┘
