@@ -43,7 +43,6 @@ Successfully tagged netology_elastic:v1
 └─(17:53:00 on main ✹ ✚ ✭)──> sudo docker run --name elastic -p 9200:9200 -p 9300:9300 -d netology_elastic:v1                                                                         ──(Вс,окт30)─┘
 be0a9c6db8a82542c8322c339ec7e5305df313c62fb5b0ac99115999516c10b1
 ```
-![Снимок экрана от 2022-10-30 17-59-51](https://user-images.githubusercontent.com/103331839/198886307-a8af93e7-3d46-4c12-8847-6d85666baa75.png)
 
 
 ```bash
@@ -86,6 +85,118 @@ https://hub.docker.com/repository/docker/t0hab/netology_elastic
 
 При проектировании кластера elasticsearch нужно корректно рассчитывать количество реплик и шард,
 иначе возможна потеря данных индексов, вплоть до полной, при деградации системы.
+
+```bash
+curl -X PUT localhost:9200/ind-1 -H 'Content-Type: application/json' -d'{ "settings": { "number_of_shards": 1,  "number_of_replicas": 0 }}'
+curl -X PUT localhost:9200/ind-2 -H 'Content-Type: application/json' -d'{ "settings": { "number_of_shards": 2,  "number_of_replicas": 1 }}'
+curl -X PUT localhost:9200/ind-3 -H 'Content-Type: application/json' -d'{ "settings": { "number_of_shards": 4,  "number_of_replicas": 2 }}'    
+```
+```bash
+┌─(~/GIT/my_rep_netology)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(19:57:53)──> curl -X GET 'http://localhost:9200/_cat/indices?v'                                                                                                                        127 ↵ ──(Пн,окт31)─┘
+
+health status index            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   .geoip_databases PeGHR1QqRaqxGPpVye4gzQ   1   0         41           38     39.1mb         39.1mb
+green  open   ind-1            oDCLH2xBQXSnXnHUfunywQ   1   0          0            0       226b           226b
+yellow open   ind-3            lc8DwcMwTmeZAcbAKXTWwQ   4   2          0            0       904b           904b
+yellow open   ind-2            zij0GALYRZKE2gL1xwXGUA   2   1          0            0       452b           452b
+
+```
+```bash
+┌─(~/GIT/my_rep_netology)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(19:58:06)──> curl -X GET 'http://localhost:9200/_cluster/health/ind-1?pretty'                                                                                                                ──(Пн,окт31)─┘
+{
+  "cluster_name" : "es_cluster",
+  "status" : "green",
+  "timed_out" : false,
+  "number_of_nodes" : 1,
+  "number_of_data_nodes" : 1,
+  "active_primary_shards" : 1,
+  "active_shards" : 1,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 0,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 100.0
+}
+┌─(~/GIT/my_rep_netology)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(19:59:16)──> curl -X GET 'http://localhost:9200/_cluster/health/ind-2?pretty'                                                                                                                ──(Пн,окт31)─┘
+{
+  "cluster_name" : "es_cluster",
+  "status" : "yellow",
+  "timed_out" : false,
+  "number_of_nodes" : 1,
+  "number_of_data_nodes" : 1,
+  "active_primary_shards" : 2,
+  "active_shards" : 2,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 2,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 44.44444444444444
+}
+
+┌─(~/GIT/my_rep_netology)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(19:59:43)──> curl -X GET 'http://localhost:9200/_cluster/health/ind-3?pretty'                                                                                                                ──(Пн,окт31)─┘
+{
+  "cluster_name" : "es_cluster",
+  "status" : "yellow",
+  "timed_out" : false,
+  "number_of_nodes" : 1,
+  "number_of_data_nodes" : 1,
+  "active_primary_shards" : 4,
+  "active_shards" : 4,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 8,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 44.44444444444444
+}
+```
+
+```bash
+┌─(~/GIT/my_rep_netology)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(20:21:59)──> curl -X GET "localhost:9200/_cluster/health?pretty"                                                                                                                             ──(Пн,окт31)─┘
+{
+  "cluster_name" : "es_cluster",
+  "status" : "yellow",
+  "timed_out" : false,
+  "number_of_nodes" : 1,
+  "number_of_data_nodes" : 1,
+  "active_primary_shards" : 8,
+  "active_shards" : 8,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 10,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 44.44444444444444
+}
+```
+--Как вы думаете, почему часть индексов и кластер находится в состоянии yellow?
+Потому что реплика не может находиться с шардом на одном узле. Копия тоже не назначена. Реплицироваться некуда.
+
+--удаление 
+```bash
+┌─(~/GIT/my_rep_netology)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(20:28:52)──> curl -X DELETE 'http://localhost:9200/_all'                                                                                                                               127 ↵ ──(Пн,окт31)─┘
+
+{"acknowledged":true}%                                                                                                                                                                                         ┌─(~/GIT/my_rep_netology)─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/1)─┐
+└─(20:28:57)──> curl 'localhost:9200/_cat/indices?v'                                                                                                                                            ──(Пн,окт31)─┘
+health status index            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   .geoip_databases PeGHR1QqRaqxGPpVye4gzQ   1   0         41           38     39.1mb         39.1mb
+```
 
 ## Задача 3
 
