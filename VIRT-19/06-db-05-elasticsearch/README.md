@@ -86,6 +86,8 @@ https://hub.docker.com/repository/docker/t0hab/netology_elastic
 При проектировании кластера elasticsearch нужно корректно рассчитывать количество реплик и шард,
 иначе возможна потеря данных индексов, вплоть до полной, при деградации системы.
 
+## Ответ
+
 ```bash
 curl -X PUT localhost:9200/ind-1 -H 'Content-Type: application/json' -d'{ "settings": { "number_of_shards": 1,  "number_of_replicas": 0 }}'
 curl -X PUT localhost:9200/ind-2 -H 'Content-Type: application/json' -d'{ "settings": { "number_of_shards": 2,  "number_of_replicas": 1 }}'
@@ -185,6 +187,7 @@ yellow open   ind-2            zij0GALYRZKE2gL1xwXGUA   2   1          0        
 }
 ```
 --Как вы думаете, почему часть индексов и кластер находится в состоянии yellow?
+
 Потому что реплика не может находиться с шардом на одном узле. Копия тоже не назначена. Реплицироваться некуда.
 
 --удаление 
