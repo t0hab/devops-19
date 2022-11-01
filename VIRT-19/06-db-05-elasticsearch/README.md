@@ -230,3 +230,144 @@ green  open   .geoip_databases PeGHR1QqRaqxGPpVye4gzQ   1   0         41        
 
 Подсказки:
 - возможно вам понадобится доработать `elasticsearch.yml` в части директивы `path.repo` и перезапустить `elasticsearch`
+
+## Ответ 
+
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:03:54 on main ✹ ✚ ✭)──> curl -X PUT "localhost:9200/_snapshot/netology_backup?pretty" -H 'Content-Type: application/json' -d'                                                             ──(Вт,ноя01)─┘
+
+──(quote)── {
+──(quote)──  "type": "fs",
+──(quote)──  "settings": {
+──(quote)──   "location": "/usr/share/elasticsearch/snapshots",
+──(quote)──   "compress": true
+──(quote)──  }
+──(quote)── }'
+{
+  "acknowledged" : true
+}
+```
+
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:08:37 on main ✹ ✚ ✭)──> curl -X PUT "localhost:9200/test?pretty" -H 'Content-Type: application/json' -d'                                                                            130 ↵ ──(Вт,ноя01)─┘
+──(quote)── {
+──(quote)──   "settings": {
+──(quote)──     "number_of_shards": 1,
+──(quote)──     "number_of_replicas": 0
+──(quote)──   }
+──(quote)── }
+──(quote)── '
+{
+  "acknowledged" : true,
+  "shards_acknowledged" : true,
+  "index" : "test"
+}
+```
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:09:33 on main ✹ ✚ ✭)──> curl 'localhost:9200/_cat/indices?v'                                                                                                                              ──(Вт,ноя01)─┘
+health status index            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   .geoip_databases PeGHR1QqRaqxGPpVye4gzQ   1   0         41           38     39.1mb         39.1mb
+green  open   test             Jg4Vzh4MRQS-kK1icnlLIA   1   0          0            0       226b           226b
+```
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:15:00 on main ✹ ✚ ✭)──> curl -X PUT "localhost:9200/_snapshot/netology_backup/snapshot_1?wait_for_completion=true&pretty"                                                                 ──(Вт,ноя01)─┘
+{
+  "snapshot" : {
+    "snapshot" : "snapshot_1",
+    "uuid" : "Mui-tZ-WQOC6nrVnNIIkQA",
+    "repository" : "netology_backup",
+    "version_id" : 7170199,
+    "version" : "7.17.1",
+    "indices" : [
+      "test",
+      ".ds-ilm-history-5-2022.10.31-000001",
+      ".ds-.logs-deprecation.elasticsearch-default-2022.10.31-000001",
+      ".geoip_databases"
+    ],
+    "data_streams" : [
+      "ilm-history-5",
+      ".logs-deprecation.elasticsearch-default"
+    ],
+    "include_global_state" : true,
+    "state" : "SUCCESS",
+    "start_time" : "2022-11-01T10:15:24.992Z",
+    "start_time_in_millis" : 1667297724992,
+    "end_time" : "2022-11-01T10:15:26.604Z",
+    "end_time_in_millis" : 1667297726604,
+    "duration_in_millis" : 1612,
+    "failures" : [ ],
+    "shards" : {
+      "total" : 4,
+      "failed" : 0,
+      "successful" : 4
+    },
+    "feature_states" : [
+      {
+        "feature_name" : "geoip",
+        "indices" : [
+          ".geoip_databases"
+        ]
+      }
+    ]
+  }
+}
+```
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:19:45 on main ✹ ✚ ✭)──> sudo docker exec -it elastic ls -l /usr/share/elasticsearch/snapshots                                                                                         1 ↵ ──(Вт,ноя01)─┘
+[sudo] пароль для t0hab:     
+total 28
+-rw-r--r-- 1 elasticsearch elasticsearch 1422 Nov  1 10:15 index-0
+-rw-r--r-- 1 elasticsearch elasticsearch    8 Nov  1 10:15 index.latest
+drwxr-xr-x 6 elasticsearch elasticsearch 4096 Nov  1 10:15 indices
+-rw-r--r-- 1 elasticsearch elasticsearch 9742 Nov  1 10:15 meta-Mui-tZ-WQOC6nrVnNIIkQA.dat
+-rw-r--r-- 1 elasticsearch elasticsearch  454 Nov  1 10:15 snap-Mui-tZ-WQOC6nrVnNIIkQA.dat
+```
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:19:53 on main ✹ ✚ ✭)──> curl -X DELETE "localhost:9200/test?pretty"                                                                                                                       ──(Вт,ноя01)─┘
+{
+  "acknowledged" : true
+}
+```
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:23:03 on main ✹ ✚ ✭)──> curl -X PUT "localhost:9200/test-2?pretty" -H 'Content-Type: application/json' -d'                                                                          130 ↵ ──(Вт,ноя01)─┘
+──(quote)── {
+──(quote)──   "settings": {
+──(quote)──     "number_of_shards": 1,
+──(quote)──     "number_of_replicas": 0
+──(quote)──   }
+──(quote)── }
+──(quote)── '
+{
+  "acknowledged" : true,
+  "shards_acknowledged" : true,
+  "index" : "test-2"
+}
+```
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:23:47 on main ✹ ✚ ✭)──> curl 'localhost:9200/_cat/indices?pretty'                                                                                                                         ──(Вт,ноя01)─┘
+green open test-2           zjU3tTOFRFq_ei8U6D6NrQ 1 0  0  0   226b   226b
+green open .geoip_databases PeGHR1QqRaqxGPpVye4gzQ 1 0 41 38 39.1mb 39.1mb
+```
+```bash
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:24:07 on main ✹ ✚ ✭)──> curl -X POST "localhost:9200/_snapshot/netology_backup/snapshot_1/_restore?pretty" -H 'Content-Type: application/json' -d'                                        ──(Вт,ноя01)─┘
+──(quote)── {
+──(quote)──   "indices": "*",
+──(quote)──   "include_global_state": true
+──(quote)── }
+──(quote)── '
+
+┌─(~/GIT/my_rep_netology/devops-19/VIRT-19/06-db-05-elasticsearch)────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(t0hab@t0hab-pc:pts/0)─┐
+└─(13:25:39 on main ✹ ✚ ✭)──> curl 'localhost:9200/_cat/indices?pretty'                                                                                                                         ──(Вт,ноя01)─┘
+green open test-2           zjU3tTOFRFq_ei8U6D6NrQ 1 0  0  0   226b   226b
+green open test           MtWpG0_HR_uliyAcAaBVyw 1 0  0  0   226b   226b
+green open .geoip_databases PeGHR1QqRaqxGPpVye4gzQ 1 0 41 38 39.1mb 39.1mb
+```
