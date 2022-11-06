@@ -18,6 +18,6 @@ compute-default-zone: ru-central1-a
 `PACKER`
 
 1. Ссылку на репозиторий с исходной конфигурацией терраформа.  
-`[исходник](https://github.com/t0hab/devops-19/blob/main/VIRT-19/07-terraform-02-syntax/terraform/main.tf)`
+[Исходник терраформ](https://github.com/t0hab/devops-19/blob/main/VIRT-19/07-terraform-02-syntax/terraform/main.tf)
 
 
