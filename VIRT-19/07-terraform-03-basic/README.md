@@ -418,3 +418,4 @@ internal_ip_address_vm_for_each = toset([
   "192.168.10.5",
 ])
 ```
+![image](https://user-images.githubusercontent.com/103331839/200558041-6b64aed9-e1c7-432b-b451-d8866e72b663.png)
