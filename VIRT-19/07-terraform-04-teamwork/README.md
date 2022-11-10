@@ -24,8 +24,8 @@
 
 ## Ответ
 
-[atlantis.yaml](http://)
-[server.yaml](http://)
+[atlantis.yaml](https://github.com/t0hab/devops-19/blob/main/VIRT-19/07-terraform-04-teamwork/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%202/atlantis.yaml)
+[server.yaml](https://github.com/t0hab/devops-19/blob/main/VIRT-19/07-terraform-04-teamwork/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%202/server.yaml)
 
 ## Задача 3. Знакомство с каталогом модулей. 
 
@@ -37,5 +37,7 @@
 Создайте аналогичный инстанс при помощи найденного модуля.   
 
 В качестве результата задания приложите ссылку на созданный блок конфигураций. 
+
+[блок конфигураций](http://)
 
 ---
