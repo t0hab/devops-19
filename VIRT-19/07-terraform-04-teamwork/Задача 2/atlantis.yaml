@@ -1,0 +1,18 @@
+version: 3
+automerge: true
+delete_source_branch_on_merge: true
+parallel_plan: true
+parallel_apply: true
+projects:
+- dir: netology
+  # Надо запускать планирование и аплай для stage.
+  workspace: stage
+  autoplan:
+    # Необходимо включить автопланирование при изменении любых файлов *.tf.
+    when_modified: ["../modules/**/*.tf", "*.tf*"]
+- dir: netology
+  # Надо запускать планирование и аплай для prod.
+  workspace: prod
+  autoplan:
+    # Необходимо включить автопланирование при изменении любых файлов *.tf.
+    when_modified: ["../modules/**/*.tf", "*.tf*"]
