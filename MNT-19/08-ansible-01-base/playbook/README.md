@@ -3,6 +3,7 @@
 1. Где расположен файл с `some_fact` из второго пункта задания?
 
 `../playbook/group_vars/` (all, deb, el)
+
 2. Какая команда нужна для запуска вашего `playbook` на окружении `test.yml`?
 
 `ansible-playbook site.yml -i inventory/test.yml`
