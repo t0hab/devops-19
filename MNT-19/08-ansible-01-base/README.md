@@ -15,8 +15,10 @@ ansible [core 2.13.6]
   libyaml = True
 ```
 2. Создайте свой собственный публичный репозиторий на github с произвольным именем.
+
 [отдельная репка](https://github.com/t0hab/08-ansible-01-base.git)
 3. Скачайте [playbook](./playbook/) из репозитория с домашним заданием и перенесите его в свой репозиторий.
+
 [плэйбук из репки](https://github.com/t0hab/08-ansible-01-base/tree/main/playbook)
 
 ## Основная часть
