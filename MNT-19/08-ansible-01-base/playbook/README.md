@@ -10,7 +10,7 @@
 
 3. Какой командой можно зашифровать файл?
 
-`ansible-vault create <file_name>`
+`ansible-vault encrypt <file_name>`
 
 4. Какой командой можно расшифровать файл?
 
