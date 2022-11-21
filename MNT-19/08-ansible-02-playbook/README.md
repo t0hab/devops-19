@@ -38,7 +38,6 @@ vector:
 
 ```yaml
 ---
----
 - name: Install Clickhouse
   hosts: clickhouse
   tasks:
