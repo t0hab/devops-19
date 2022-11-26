@@ -29,5 +29,7 @@
 9.  Подготовьте README.md файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
+[playbook](https://github.com/t0hab/devops-19/tree/main/MNT-19/08-ansible-03-yandex/playbook)
+
 ![Скриншот_6](https://github.com/t0hab/devops-19/blob/main/MNT-19/08-ansible-03-yandex/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-11-26%20%D0%B2%2020.54.44.png?raw=true)
 ![Скриншот_7](https://github.com/t0hab/devops-19/blob/main/MNT-19/08-ansible-03-yandex/image/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-11-26%20%D0%B2%2020.54.56.png?raw=true)
