@@ -1,0 +1,18 @@
+---
+clickhouse:
+  hosts:
+    clickhouse:
+      ansible_host: 51.250.23.93
+      ansible_user: t0hab
+
+vector:
+  hosts:
+    vector:
+      ansible_host: 84.201.178.88
+      ansible_user: t0hab
+
+lighthouse:
+  hosts:
+    lighthouse:
+      ansible_host: 51.250.97.255
+      ansible_user: t0hab
