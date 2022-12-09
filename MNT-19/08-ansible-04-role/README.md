@@ -34,7 +34,7 @@
 
 ## Ответ
 
-[playbook]()
+[playbook](https://github.com/t0hab/devops-19/tree/main/MNT-19/08-ansible-04-role/playbook)
 [clickhouse](https://github.com/t0hab/Clickhouse-Role)
 [lighthouse](https://github.com/t0hab/lighthouse_roles)
 [vector](https://github.com/t0hab/vector_roles)
