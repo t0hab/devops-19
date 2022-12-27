@@ -1,0 +1,23 @@
+---
+vector_version: "0.21.2"
+vector_url_rpm: https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-1.x86_64.rpm
+vector_url_deb: https://packages.timber.io/vector/{{ vector_version }}/vector_{{ vector_version }}-1_amd64.deb
+vector_config:
+  sources:
+    our_log:
+      type: file
+      read_from: beginning
+      ignore_older_secs: 600
+      include:
+        - /var/log/**/*.log
+  sinks:
+    to_clickhouse:
+      type: clickhouse
+      inputs:
+        - our_log
+      database: custom
+      endpoint: http://localhost:8123
+      table: my_table
+      compression: gzip
+      healthcheck: false
+      skip_unknown_fields: true

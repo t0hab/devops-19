@@ -1,0 +1,9 @@
+---
+- name: Vector | Create service
+  become: true
+  ansible.builtin.template:
+    src: vector.service.j2
+    dest: /etc/systemd/system/vector.service
+    mode: "644"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"

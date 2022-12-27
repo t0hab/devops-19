@@ -1,0 +1,9 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Validate vector config file
+      ansible.builtin.command: "vector validate --no-environment --config-yaml vector.yml"
+      register: validate_result
+      changed_when: false

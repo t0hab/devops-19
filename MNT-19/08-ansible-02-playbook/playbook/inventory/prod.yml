@@ -1,19 +1,6 @@
 ---
-clickhouse:
+elasticsearch:
   hosts:
-    clickhouse-01:
-      ansible_ssh_host: 192.168.0.252
-      ansible_ssh_user: root
-      #ansible_connection: 192.168.0.252
-      #ansible_user: t0hab
-vector:
-  hosts:
-    vector-01:
-      ansible_ssh_host: 192.168.0.252
-      ansible_ssh_user: root
-      #ansible_connection: 192.168.0.252
-      #ansible_user: t0hab
-
-#clickhouse ansible_host=192.168.0.252 ansible_user=t0hab ansible_become=true
-#vector ansible_host=192.168.0.252 ansible_user=t0hab ansible_become=true
-
+    localhost:
+      ansible_connection: ssh
+      ansible_user: root
