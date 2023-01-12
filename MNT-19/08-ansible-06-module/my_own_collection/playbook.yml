@@ -1,0 +1,5 @@
+---
+- name create file
+  hosts localhost
+  roles
+    - create_file

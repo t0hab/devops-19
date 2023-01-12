@@ -1,0 +1,5 @@
+---
+- name: create file
+  my_own_namespace.yandex_cloud_elk.create_file:
+    path: "{{ path }}"
+    content: "{{ content }}"
