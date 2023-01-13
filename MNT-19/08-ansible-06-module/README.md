@@ -172,7 +172,11 @@ if __name__ == '__main__':
 17. В ответ необходимо прислать ссылку на репозиторий с collection
 
 
+---
+## Ответ:
 
-Ответ:
 [Коллекция](https://github.com/t0hab/devops-19/tree/main/MNT-19/08-ansible-06-module/my_own_collection)
+
 [Playbook](https://github.com/t0hab/devops-19/blob/main/MNT-19/08-ansible-06-module/my_own_collection/playbook.yml)
+
+---
