@@ -5,7 +5,7 @@
 2. Настроить её для своей "команды разработки"
 3. Создать доски kanban и scrum
 
-<img width="1416" alt="image" src="https://user-images.githubusercontent.com/103331839/212902739-ba467122-79f1-4749-b0a3-166bacdc1725.png">
+<img width="1421" alt="image" src="https://user-images.githubusercontent.com/103331839/212906353-2913d279-c959-4d7a-b67e-d1d2e79276fa.png">
 
 ## Основная часть
 В рамках основной части необходимо создать собственные workflow для двух типов задач: bug и остальные типы задач. Задачи типа bug должны проходить следующий жизненный цикл:
