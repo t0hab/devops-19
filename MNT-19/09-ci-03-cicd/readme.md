@@ -30,10 +30,19 @@
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215356700-07776ff5-a4be-4f49-9955-f10657a73a68.png">
 
 8. Запускаем анализатор против кода из директории [example](./example) с дополнительным ключом `-Dsonar.coverage.exclusions=fail.py`
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215357406-0c191807-2952-4823-af35-3ecc346b171e.png">
+
 9. Смотрим результат в интерфейсе
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215357500-53afc7f9-5413-4bfa-9000-457d7baece06.png">
+
 10. Исправляем ошибки, которые он выявил(включая warnings)
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215357753-f2320b00-6e03-4e4b-87d7-228a71123d01.png">
+
 11. Запускаем анализатор повторно - проверяем, что QG пройдены успешно
 12. Делаем скриншот успешного прохождения анализа, прикладываем к решению ДЗ
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215357766-94914929-0d49-475b-b437-947d6a69cb67.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215357780-be7ec830-54bf-4e15-b5c8-0d0f62aaa438.png">
+
 
 ## Знакомство с Nexus
 
