@@ -1,5 +1,5 @@
-def increment(index):
-    index =+ 1
+def increment (index=0):
+    index += 1
     return index
 def get_square(numb):
     return numb*numb
