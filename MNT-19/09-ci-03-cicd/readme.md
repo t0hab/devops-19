@@ -54,9 +54,28 @@
    3. version: 8_282
    4. classifier: distrib
    5. type: tar.gz
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215358638-2976dccd-b4ab-4a28-a98f-c74615a99cce.png">
+
 2. В него же загружаем такой же артефакт, но с version: 8_102
 3. Проверяем, что все файлы загрузились успешно
 4. В ответе присылаем файл `maven-metadata.xml` для этого артефекта
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215358692-20d331f2-8556-438a-917d-34e6ebbb88f9.png">
+
+```xml
+<metadata modelVersion="1.1.0">
+<groupId>netology</groupId>
+<artifactId>java</artifactId>
+<versioning>
+<latest>8_282</latest>
+<release>8_282</release>
+<versions>
+<version>8_102</version>
+<version>8_282</version>
+</versions>
+<lastUpdated>20230129221623</lastUpdated>
+</versioning>
+</metadata>
+```
 
 ### Знакомство с Maven
 
