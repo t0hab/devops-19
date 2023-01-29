@@ -85,7 +85,9 @@
 2. Разархивируем, делаем так, чтобы binary был доступен через вызов в shell (или меняем переменную PATH или любой другой удобный вам способ)
 3. Удаляем из `apache-maven-<version>/conf/settings.xml` упоминание о правиле, отвергающем http соединение( раздел mirrors->id: my-repository-http-unblocker)
 4. Проверяем `mvn --version`
-5. Забираем директорию [mvn](./mvn) с pom
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215359790-9938b8ad-efe1-4528-b8a4-4d398ed597cb.png">
+
+6. Забираем директорию [mvn](./mvn) с pom
 
 ### Основная часть
 
@@ -93,6 +95,8 @@
 2. Запускаем команду `mvn package` в директории с `pom.xml`, ожидаем успешного окончания
 3. Проверяем директорию `~/.m2/repository/`, находим наш артефакт
 4. В ответе присылаем исправленный файл `pom.xml`
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215362246-83452be4-8e97-4ed4-9550-a7dfd9f4a352.png">
+
 
 ---
 
