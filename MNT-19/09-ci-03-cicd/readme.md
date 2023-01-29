@@ -95,6 +95,7 @@
 2. Запускаем команду `mvn package` в директории с `pom.xml`, ожидаем успешного окончания
 3. Проверяем директорию `~/.m2/repository/`, находим наш артефакт
 4. В ответе присылаем исправленный файл `pom.xml`
+[pom.xml](https://github.com/t0hab/devops-19/blob/main/MNT-19/09-ci-03-cicd/mvn/pom.xml)
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215362246-83452be4-8e97-4ed4-9550-a7dfd9f4a352.png">
 
 
