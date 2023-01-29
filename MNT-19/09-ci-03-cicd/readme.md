@@ -6,10 +6,16 @@
 2. Прописываем в [inventory](./infrastructure/inventory/cicd/hosts.yml) [playbook'a](./infrastructure/site.yml) созданные хосты
 3. Добавляем в [files](./infrastructure/files/) файл со своим публичным ключом (id_rsa.pub). Если ключ называется иначе - найдите таску в плейбуке, которая использует id_rsa.pub имя и исправьте на своё
 4. Запускаем playbook, ожидаем успешного завершения
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215356152-da343491-ee11-45e9-adf8-73c5952bab44.png">
+
 5. Проверяем готовность Sonarqube через [браузер](http://localhost:9000)
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215356135-ecc2ab07-f57d-4e0a-b256-2a1b99e299c9.png">
+
 6. Заходим под admin\admin, меняем пароль на свой
 7.  Проверяем готовность Nexus через [бразуер](http://localhost:8081)
 8. Подключаемся под admin\admin123, меняем пароль, сохраняем анонимный доступ
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/215356141-9cf09fb3-3b8b-48d2-ae41-2c749b42e4d5.png">
+
 
 ## Знакомоство с SonarQube
 
