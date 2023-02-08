@@ -29,10 +29,5 @@
 
 Если всё отработало в рамках ожидания - выгрузить схемы workflow для импорта в XML. Файлы с workflow приложить к решению задания.
 
----
-
-### Как оформить ДЗ?
-
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
-
----
+[BUG](https://github.com/t0hab/devops-19/blob/main/MNT-19/09-ci-01-intro/files/bug.xml)
+[TASK](https://github.com/t0hab/devops-19/blob/main/MNT-19/09-ci-01-intro/files/task.xml)
