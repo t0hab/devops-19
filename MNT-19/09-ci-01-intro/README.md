@@ -28,6 +28,7 @@
 Перейти в scrum, запланировать новый спринт, состоящий из задач эпика и одного бага, стартовать спринт, провести задачи до состояния Closed. Закрыть спринт.
 
 Если всё отработало в рамках ожидания - выгрузить схемы workflow для импорта в XML. Файлы с workflow приложить к решению задания.
-
+---
 [BUG](https://github.com/t0hab/devops-19/blob/main/MNT-19/09-ci-01-intro/files/bug.xml)
+
 [TASK](https://github.com/t0hab/devops-19/blob/main/MNT-19/09-ci-01-intro/files/task.xml)
