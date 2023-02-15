@@ -5,9 +5,20 @@
 1. В Ya.Cloud создайте новый инстанс (4CPU4RAM) на основе образа `jetbrains/teamcity-server`
 2. Дождитесь запуска teamcity, выполните первоначальную настройку
 3. Создайте ещё один инстанс(2CPU4RAM) на основе образа `jetbrains/teamcity-agent`. Пропишите к нему переменную окружения `SERVER_URL: "http://158.160.29.79:8111"`
+<img width="1264" alt="image" src="https://user-images.githubusercontent.com/103331839/219116697-7b29bfd0-c0f1-43e5-9607-3ada57bb3791.png">
+
+
 4. Авторизуйте агент
+<img width="1255" alt="image" src="https://user-images.githubusercontent.com/103331839/219116920-a502fd86-cd59-4473-a8ad-efc568ad029c.png">
+
+
 5. Сделайте fork [репозитория](https://github.com/aragastmatb/example-teamcity)
+<img width="1356" alt="image" src="https://user-images.githubusercontent.com/103331839/219117504-a49c6ad4-fb6b-4009-bc76-9146d8a80fc7.png">
+
+
 6. Создать VM (2CPU4RAM) и запустить [playbook](./infrastructure)
+<img width="1269" alt="image" src="https://user-images.githubusercontent.com/103331839/219118331-3c520d91-1b01-41d8-8d52-c64509670dec.png">
+
 
 ## Основная часть
 
