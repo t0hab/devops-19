@@ -48,25 +48,53 @@
 <img width="716" alt="image" src="https://user-images.githubusercontent.com/103331839/219127951-46163f5b-7d4b-4d65-a791-24160fb4f886.png">
 
 
-9. В pom.xml необходимо поменять ссылки на репозиторий и nexus
-10. Запустите сборку по master, убедитесь что всё прошло успешно, артефакт появился в nexus
-11. Мигрируйте `build configuration` в репозиторий
-12. Создайте отдельную ветку `feature/add_reply` в репозитории
-13. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`
-14. Дополните тест для нового метода на поиск слова `hunter` в новой реплике
-15. Сделайте push всех изменений в новую ветку в репозиторий
-16. Убедитесь что сборка самостоятельно запустилась, тесты прошли успешно
-17. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`
-18. Убедитесь, что нет собранного артефакта в сборке по ветке `master`
-19. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки
-20. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны
-21. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity
-22. В ответ предоставьте ссылку на репозиторий
+В pom.xml необходимо поменять ссылки на репозиторий и nexus. Запустите сборку по master, убедитесь что всё прошло успешно, артефакт появился в nexus
 
----
+<img width="1075" alt="image" src="https://user-images.githubusercontent.com/103331839/219129136-07ab28c5-7892-42a3-9d6e-dcad080bcf89.png">
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/103331839/219129079-ab9a6230-7bc8-4f7c-9dae-f299908084aa.png">
 
-### Как оформить ДЗ?
+Мигрируйте `build configuration` в репозиторий
 
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
+<img width="957" alt="image" src="https://user-images.githubusercontent.com/103331839/219130769-19f366a7-9d39-4304-9219-e36c95218915.png">
 
----
+
+Создайте отдельную ветку `feature/add_reply` в репозитории
+
+<img width="967" alt="image" src="https://user-images.githubusercontent.com/103331839/219132236-25ebe83a-33c0-44d5-9411-5105549b9926.png">
+
+
+Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`
+
+[hunter](https://github.com/t0hab/example-teamcity/blob/add_reply/src/main/java/plaindoll/Welcomer.java)
+
+Дополните тест для нового метода на поиск слова `hunter` в новой реплике
+
+[hunter](https://github.com/t0hab/example-teamcity/blob/add_reply/src/test/java/plaindoll/WelcomerTest.java)
+
+Сделайте push всех изменений в новую ветку в репозиторий
+
+Сделал
+
+Убедитесь что сборка самостоятельно запустилась, тесты прошли успешно
+
+<img width="1084" alt="image" src="https://user-images.githubusercontent.com/103331839/219134321-136e379f-f099-4bee-a506-852b6d89fed9.png">
+
+Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`
+
+<img width="935" alt="image" src="https://user-images.githubusercontent.com/103331839/219135710-7f529932-d72f-4747-ac1e-eea0b9aafbfd.png">
+
+Убедитесь, что нет собранного артефакта в сборке по ветке `master`
+
+<img width="1076" alt="image" src="https://user-images.githubusercontent.com/103331839/219136944-8c585754-5dc8-4a63-b8f5-b4069f2093b7.png">
+
+Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки
+
+<img width="914" alt="image" src="https://user-images.githubusercontent.com/103331839/219137370-2812be9f-ad7a-441f-9df5-368f354d77bd.png">
+
+Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны
+Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity
+
+<img width="1090" alt="image" src="https://user-images.githubusercontent.com/103331839/219137958-c454a36d-bf4f-4084-bb4a-f128cb2dacaf.png">
+
+
+[В ответ предоставьте ссылку на репозиторий](https://github.com/t0hab/example-teamcity)
