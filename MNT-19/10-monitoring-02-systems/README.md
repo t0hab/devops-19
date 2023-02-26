@@ -98,6 +98,7 @@ Last login: Mon Feb 27 00:06:47 on ttys002
   ~
 ❯
 ```  
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/221432032-e6a2d67b-15d0-421a-9283-446d63d833b7.png">
 
 
 
