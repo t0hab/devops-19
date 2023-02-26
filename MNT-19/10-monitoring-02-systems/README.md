@@ -78,6 +78,7 @@ P.S.: если при запуске некоторые контейнеры б�
 `./data:/var/lib:Z`
 
 - Ответ:
+- 
   ```bash
   [+] Running 6/6
  ⠿ Network sandbox_default            Created                                                                                                                                0.0s
@@ -88,7 +89,8 @@ P.S.: если при запуске некоторые контейнеры б�
  ⠿ Container sandbox-chronograf-1     Started                                                                                                                                5.0s
 Opening tabs in browser...
 MacBook-Air-Tokhir:sandbox root#
-  ```
+```
+
 ```bash
 Last login: Mon Feb 27 00:06:47 on ttys002
 ❯ curl http://localhost:8086/ping
@@ -98,6 +100,7 @@ Last login: Mon Feb 27 00:06:47 on ttys002
   ~
 ❯
 ```  
+
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/221432032-e6a2d67b-15d0-421a-9283-446d63d833b7.png">
 
 
