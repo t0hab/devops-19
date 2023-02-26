@@ -114,6 +114,10 @@ Last login: Mon Feb 27 00:06:47 on ttys002
 
 Для выполнения задания приведите скриншот с отображением метрик утилизации места на диске 
 (disk->host->telegraf_container_id) из веб-интерфейса.
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/103331839/221432765-6baf1536-e112-4a98-ba7d-28348d964045.png">
+
+
 #
 9. Изучите список [telegraf inputs](https://github.com/influxdata/telegraf/tree/master/plugins/inputs). 
 Добавьте в конфигурацию telegraf следующий плагин - [docker](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker):
