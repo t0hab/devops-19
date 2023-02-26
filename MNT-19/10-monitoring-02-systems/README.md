@@ -78,8 +78,8 @@ P.S.: если при запуске некоторые контейнеры б�
 `./data:/var/lib:Z`
 
 - Ответ:
-- 
-  ```bash
+
+```bash
   [+] Running 6/6
  ⠿ Network sandbox_default            Created                                                                                                                                0.0s
  ⠿ Container sandbox-influxdb-1       Started                                                                                                                                4.6s
