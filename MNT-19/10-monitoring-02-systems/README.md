@@ -142,13 +142,8 @@ Last login: Mon Feb 27 00:06:47 on ttys002
       - "8094:8094"
       - "8125:8125/udp"
 ```
-
-- Ответ:
-<img width="1174" alt="image" src="https://user-images.githubusercontent.com/103331839/221434654-c65c314c-b48d-4b24-aa97-c851dd69ea6d.png">
-
-
-
 После настройке перезапустите telegraf, обновите веб интерфейс и приведите скриншотом список `measurments` в 
 веб-интерфейсе базы telegraf.autogen . Там должны появиться метрики, связанные с docker.
 
-Факультативно можете изучить какие метрики собирает telegraf после выполнения данного задания.
+- Ответ:
+<img width="1174" alt="image" src="https://user-images.githubusercontent.com/103331839/221434654-c65c314c-b48d-4b24-aa97-c851dd69ea6d.png">
