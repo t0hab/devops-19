@@ -13,9 +13,6 @@
 <img width="1425" alt="image" src="https://user-images.githubusercontent.com/103331839/224560081-3671c031-db96-48b3-a41b-e8c979bd7b13.png">
 
 3. Подключите поднятый вами prometheus, как источник данных.
-
-<img width="1427" alt="image" src="https://user-images.githubusercontent.com/103331839/224562783-d956afad-0958-48f8-8025-bf55fa5a590d.png">
-
 4. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
 
 <img width="970" alt="image" src="https://user-images.githubusercontent.com/103331839/224562797-6a2f5263-bae2-422c-b0fd-1764dc29d1ab.png">
