@@ -67,6 +67,9 @@ node_filesystem_free_bytes{instance="nodeexporter:9100", job="nodeexporter", mou
 1. Создайте для каждой Dashboard подходящее правило alert — можно обратиться к первой лекции в блоке «Мониторинг».
 1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
 
+<img width="1349" alt="image" src="https://user-images.githubusercontent.com/103331839/224564757-728676b0-03de-494d-95ee-f48146e0e505.png">
+
+
 ## Задание 4
 
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
