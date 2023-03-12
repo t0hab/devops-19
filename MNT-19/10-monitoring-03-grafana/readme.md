@@ -75,3 +75,4 @@ node_filesystem_free_bytes{instance="nodeexporter:9100", job="nodeexporter", mou
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
 1. В качестве решения задания приведите листинг этого файла.
 
+[Dashboard](https://github.com/t0hab/devops-19/blob/main/MNT-19/10-monitoring-03-grafana/dashboard.json)
