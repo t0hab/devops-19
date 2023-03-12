@@ -29,11 +29,38 @@
 Создайте Dashboard и в ней создайте Panels:
 
 - утилизация CPU для nodeexporter (в процентах, 100-idle);
+
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/103331839/224563434-5f80aeae-25ba-4070-9ed8-396520445e98.png">
+
 - CPULA 1/5/15;
+
+<img width="663" alt="image" src="https://user-images.githubusercontent.com/103331839/224563846-dd1cc432-ab33-4430-bb74-37f2fa8580d7.png">
+
 - количество свободной оперативной памяти;
+
+<img width="663" alt="image" src="https://user-images.githubusercontent.com/103331839/224564020-4a51c6c6-dcce-4ba8-b558-4868ad134889.png">
+
 - количество места на файловой системе.
 
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/103331839/224564128-4ca7d36b-d7ec-43fa-a4c6-84f707b66bfc.png">
+
+
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
+
+<img width="1423" alt="image" src="https://user-images.githubusercontent.com/103331839/224564181-71d18a1b-a8c4-4cf5-993e-c38b659fa416.png">
+
+avg (rate(node_cpu_seconds_total{instance="nodeexporter:9100", job="nodeexporter", mode="idle"}[10s]) * 100)
+
+node_load1{instance="nodeexporter:9100", job="nodeexporter"}
+
+node_load5{instance="nodeexporter:9100", job="nodeexporter"}
+
+node_load15{instance="nodeexporter:9100", job="nodeexporter"}
+
+avg_over_time (node_memory_MemFree_bytes{instance="nodeexporter:9100", job="nodeexporter"}[20s])
+
+node_filesystem_free_bytes{instance="nodeexporter:9100", job="nodeexporter", mountpoint="/"}
+
 
 ## Задание 3
 
