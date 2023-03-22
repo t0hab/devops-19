@@ -31,6 +31,7 @@ Free Cloud account имеет ограничения:
 
 ![image](https://user-images.githubusercontent.com/103331839/226835647-d202cea6-fead-4ebb-b52c-2c32fe72d569.png)
 ![image](https://user-images.githubusercontent.com/103331839/226835817-11517978-c334-408f-a9e4-df1b564f84d5.png)
+![image](https://user-images.githubusercontent.com/103331839/226836398-3ac3e5c5-8a49-4587-b902-1a9cc6548d57.png)
 
 
 ## Задание 3
