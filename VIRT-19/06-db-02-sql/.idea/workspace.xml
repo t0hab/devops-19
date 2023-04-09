@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b24a3ff4-fe8f-4463-8c39-8027364a2902" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../MNT-19/08-ansible-01-base/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MNT-19/08-ansible-01-base/site.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/devops-19.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/devops-19.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/01-intro-01/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/01-intro-01/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/02-git-01-vcs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/02-git-01-vcs/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/02-git-02-base/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/02-git-02-base/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/02-git-02-base/terraform/has_been_moved.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/02-git-02-base/terraform/has_been_moved.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/02-git-03-branching/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/02-git-03-branching/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/02-git-04-tools/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/02-git-04-tools/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-01-terminal/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-01-terminal/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-02-terminal/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-02-terminal/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-03-os/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-03-os/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-04-os/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-04-os/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-05-fs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-05-fs/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-06-net/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-06-net/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-07-net/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-07-net/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-08-net/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-08-net/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/03-sysadmin-09-security/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/03-sysadmin-09-security/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-01-bash/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-01-bash/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-02-py/host.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-02-py/host.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-02-py/input.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-02-py/input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-02-py/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-02-py/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-02-py/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-02-py/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-03-yaml/host.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-03-yaml/host.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-03-yaml/hosts.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-03-yaml/hosts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-03-yaml/hosts.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-03-yaml/hosts.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../devsys-19/04-script-03-yaml/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEVSYS-19/04-script-03-yaml/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="b24a3ff4-fe8f-4463-8c39-8027364a2902" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
