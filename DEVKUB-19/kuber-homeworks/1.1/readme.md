@@ -14,6 +14,14 @@
 
 2. ВМ c ОС Linux в облаке либо ВМ на локальной машине для установки MicroK8S  
 
+
+### шаг выполнения
+
+Создал ВМ в облаке
+
+<img width="636" alt="image" src="https://user-images.githubusercontent.com/103331839/233117849-192765c8-293b-4e6d-b46c-970a179c259b.png">
+
+
 ------
 
 ### Инструкция к заданию
@@ -24,6 +32,12 @@
     - sudo snap install microk8s --classic,
     - добавить локального пользователя в группу `sudo usermod -a -G microk8s $USER`,
     - изменить права на папку с конфигурацией `sudo chown -f -R $USER ~/.kube`.
+
+### шаг выполнения
+
+<img width="786" alt="image" src="https://user-images.githubusercontent.com/103331839/233118437-bf3f06e0-29be-4658-9d01-d8391ba6e71a.png">
+
+<img width="481" alt="image" src="https://user-images.githubusercontent.com/103331839/233120158-1c2eb30b-8528-4984-a5bf-b2169e1f3b0b.png">
 
 2. Полезные команды:
     - проверить статус `microk8s status --wait-ready`;
