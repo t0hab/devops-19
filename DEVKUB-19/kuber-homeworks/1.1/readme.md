@@ -83,5 +83,8 @@
 ### Ответ
 
 <img width="819" alt="image" src="https://user-images.githubusercontent.com/103331839/233831585-7c10924f-a96a-4a42-90b4-97301c0bf757.png">
+<img width="898" alt="image" src="https://user-images.githubusercontent.com/103331839/233832633-93b4fe66-bef8-49c9-8114-3ab42cc6b44c.png">
+<img width="1259" alt="image" src="https://user-images.githubusercontent.com/103331839/233832643-6124e0c1-996a-4726-b97a-4b8b8a97eb72.png">
+<img width="1262" alt="image" src="https://user-images.githubusercontent.com/103331839/233832705-7c412dc7-ae84-4bc0-8818-5156ca45097b.png">
 
 
