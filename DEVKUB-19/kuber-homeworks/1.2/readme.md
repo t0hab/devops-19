@@ -61,39 +61,10 @@ spec:
 
 ### Ответ на задание 2.
 
-Pod netology-web
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: netology-web
-  labels:
-    app: netology-web
-spec:
-  containers:
-  - name: echoserver-arm-container
-    image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
-    ports:
-    - containerPort: 8080
-```
 
-Service netology-svc
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: netology-svc
-spec:
-  selector:
-    app: netology-web
-  ports:
-  - name: http
-    port: 80
-    targetPort: 8080
-  type: NodePort
-  ```
-  <img width="1087" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/7004ee53-b3d7-4d31-af6a-f5495e5ea562">
 
+
+<img width="973" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/66041514-c9fa-4c83-ac7c-82b65665586b">
 
 
 ------
