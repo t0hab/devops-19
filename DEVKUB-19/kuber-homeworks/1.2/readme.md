@@ -44,6 +44,9 @@ spec:
     ports:
     - containerPort: 8080
 ```
+<img width="1087" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/27afdb24-a9d1-4a13-9273-6ff15a99bd87">
+<img width="1424" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/895e4455-9956-4049-b056-f675ea6da5ed">
+
 ------
 
 ### Задание 2. Создать Service и подключить его к Pod
