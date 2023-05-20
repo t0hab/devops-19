@@ -30,6 +30,8 @@
 
 ### Ответ на задание 1.
 
+`gcr.io/kubernetes-e2e-test-images/echoserver:2.2` не работает на маке, использовал `gcr.io/kubernetes-e2e-test-images/echoserver-arm:2.2`
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -40,12 +42,14 @@ metadata:
 spec:
   containers:
   - name: echoserver-arm-container
-    image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
+    image: gcr.io/kubernetes-e2e-test-images/echoserver-arm:2.2
     ports:
     - containerPort: 8080
 ```
-<img width="1087" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/27afdb24-a9d1-4a13-9273-6ff15a99bd87">
-<img width="1439" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/0f62e0d9-a571-4b4a-bfdf-9ea7f17a5568">
+<img width="1088" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/2e45e51d-1d46-4cf0-8bfa-53913faef72d">
+<img width="1437" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/ec02efb8-2999-41ee-8c73-3c2794505460">
+
+
 ------
 
 ### Задание 2. Создать Service и подключить его к Pod
@@ -72,5 +76,25 @@ spec:
     ports:
     - containerPort: 8080
 ```
+
+Service netology-svc
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: netology-svc
+spec:
+  selector:
+    app: netology-web
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+  type: NodePort
+  ```
+  <img width="1087" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/7004ee53-b3d7-4d31-af6a-f5495e5ea562">
+
+
+
 ------
 
