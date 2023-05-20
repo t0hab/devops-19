@@ -61,10 +61,9 @@ spec:
 
 ### Ответ на задание 2.
 
-
-
-
 <img width="973" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/66041514-c9fa-4c83-ac7c-82b65665586b">
+<img width="1126" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/c7243f6e-0eee-4d2c-8ecd-68bcb783883d">
+<img width="1120" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/94ff30bb-3b2d-4f7a-bbfc-ba0546153320">
 
 
 ------
