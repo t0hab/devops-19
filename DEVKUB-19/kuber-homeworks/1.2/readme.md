@@ -44,7 +44,7 @@ spec:
   - name: echoserver-arm-container
     image: gcr.io/kubernetes-e2e-test-images/echoserver-arm:2.2
     ports:
-    - containerPort: 8080
+    - containerPort: 80
 ```
 <img width="1088" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/2e45e51d-1d46-4cf0-8bfa-53913faef72d">
 <img width="1437" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/ec02efb8-2999-41ee-8c73-3c2794505460">
@@ -60,10 +60,38 @@ spec:
 4. Подключиться локально к Service с помощью `kubectl port-forward` и вывести значение (curl или в браузере).
 
 ### Ответ на задание 2.
-
+Pod с именем netology-web
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: netology-web
+  labels:
+    app: netology
+spec:
+  containers:
+  - name: netology-web
+    image: gcr.io/kubernetes-e2e-test-images/echoserver-arm:2.2
+    ports:
+    - containerPort: 80
+ ```
+ Service с именем netology-svc
+ ```yaml
+ apiVersion: v1
+kind: Service
+metadata:
+  name: netology-svc
+spec:
+  selector:
+    app: netology
+  ports:
+    - port: 8080
+```
+ 
 <img width="973" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/66041514-c9fa-4c83-ac7c-82b65665586b">
 <img width="1126" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/c7243f6e-0eee-4d2c-8ecd-68bcb783883d">
 <img width="1120" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/94ff30bb-3b2d-4f7a-bbfc-ba0546153320">
+<img width="1440" alt="image" src="https://github.com/t0hab/devops-19/assets/103331839/19854b45-1e09-4fda-a9bd-7d0545858bdd">
 
 
 ------
