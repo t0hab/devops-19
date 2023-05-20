@@ -40,7 +40,7 @@ metadata:
 spec:
   containers:
   - name: echoserver-arm-container
-    image: gcr.io/kubernetes-e2e-test-images/echoserver-arm:2.2
+    image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
     ports:
     - containerPort: 8080
 ```
@@ -56,5 +56,22 @@ spec:
 3. Создать Service с именем netology-svc и подключить к netology-web.
 4. Подключиться локально к Service с помощью `kubectl port-forward` и вывести значение (curl или в браузере).
 
+### Ответ на задание 2.
+
+Pod netology-web
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: netology-web
+  labels:
+    app: netology-web
+spec:
+  containers:
+  - name: echoserver-arm-container
+    image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
+    ports:
+    - containerPort: 8080
+```
 ------
 
