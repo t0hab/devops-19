@@ -9,4 +9,4 @@ spec:
   - name: netology-web
     image: gcr.io/kubernetes-e2e-test-images/echoserver-arm:2.2
     ports:
-    - containerPort: 8080
+    - containerPort: 80
